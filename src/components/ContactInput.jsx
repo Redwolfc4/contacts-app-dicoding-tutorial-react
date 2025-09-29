@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class ContactInput extends React.Component {
   constructor(props) {
@@ -47,5 +48,9 @@ class ContactInput extends React.Component {
     );
   }
 }
+
+ContactInput.propTypes = {
+  addContactHandler: PropTypes.func.isRequired,
+};
 
 export default ContactInput;

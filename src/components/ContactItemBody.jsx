@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 function ContactItemBody({ name, tag }) {
@@ -8,5 +9,10 @@ function ContactItemBody({ name, tag }) {
     </div>
   );
 }
+
+ContactItemBody.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+};
 
 export default ContactItemBody;
