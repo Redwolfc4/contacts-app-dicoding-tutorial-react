@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import React, { JSX } from "react";
+import { FiDelete } from "react-icons/fi";
 interface DeleteButtonProps {
     id: number;
     onDelete: (id: number) => void;
@@ -16,14 +16,9 @@ interface DeleteButtonProps {
 function DeleteButton({ id, onDelete }: DeleteButtonProps): JSX.Element {
     return (
         <button className="contact-item__delete" onClick={() => onDelete(id)}>
-            X
+            <FiDelete />
         </button>
     );
-}
-
-DeleteButton.propTypes = {
-    id: PropTypes.number.isRequired,
-    onDelete: PropTypes.func.isRequired,
 }
 
 export default DeleteButton;
